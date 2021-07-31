@@ -31,6 +31,7 @@ class User:
         """
         User.user_list.remove(self)
 
+
 class Credentials():
     """
     Create credential class to help to create new objects of  credentials
