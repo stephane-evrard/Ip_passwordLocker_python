@@ -36,3 +36,22 @@ class Credentials():
     Create credential class to help to create new objects of  credentials
     """
     credentials_list = []
+
+    @classmethod
+    def verify_user(cls, username, password):
+        """
+        method to verify whether the user is in our user_list or not.
+        """
+        a_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                a_user == user.username
+        return a_user
+    
+    def __init__(self, account, userName, password):
+        """
+        method that defines user credentials to be stored
+        """
+        self.account = account
+        self.userName = userName
+        self.password = password
